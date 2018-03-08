@@ -1,2 +1,2 @@
-# msbbix
+# msqlix
 Zabbix Agent - MSSQL
