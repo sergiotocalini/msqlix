@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.4</version>
-    <date>2018-03-21T13:09:32Z</date>
+    <date>2018-03-21T14:48:29Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -1196,8 +1196,8 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                     <snmp_community/>
                     <snmp_oid/>
                     <key>msqlix.discovery.databases</key>
-                    <delay>60</delay>
-                    <status>1</status>
+                    <delay>12h</delay>
+                    <status>0</status>
                     <allowed_hosts/>
                     <snmpv3_contextname/>
                     <snmpv3_securityname/>
@@ -1818,6 +1818,48 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                             <master_item_prototype/>
                         </item_prototype>
                         <item_prototype>
+                            <name>[MSSQL] Database {#DBNAME}: Log Flush Wait Time</name>
+                            <type>0</type>
+                            <snmp_community/>
+                            <snmp_oid/>
+                            <key>perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Log Flush Wait Time&quot;,300]</key>
+                            <delay>1m</delay>
+                            <history>30d</history>
+                            <trends>90d</trends>
+                            <status>0</status>
+                            <value_type>0</value_type>
+                            <allowed_hosts/>
+                            <units>sec</units>
+                            <snmpv3_contextname/>
+                            <snmpv3_securityname/>
+                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                            <snmpv3_authpassphrase/>
+                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                            <snmpv3_privpassphrase/>
+                            <params/>
+                            <ipmi_sensor/>
+                            <authtype>0</authtype>
+                            <username/>
+                            <password/>
+                            <publickey/>
+                            <privatekey/>
+                            <port/>
+                            <description/>
+                            <inventory_link>0</inventory_link>
+                            <applications>
+                                <application>
+                                    <name>MSSQL</name>
+                                </application>
+                            </applications>
+                            <valuemap/>
+                            <logtimefmt/>
+                            <preprocessing/>
+                            <jmx_endpoint/>
+                            <application_prototypes/>
+                            <master_item_prototype/>
+                        </item_prototype>
+                        <item_prototype>
                             <name>[MSSQL] Database {#DBNAME}: Log Flush Write Time (ms)</name>
                             <type>0</type>
                             <snmp_community/>
@@ -2321,55 +2363,13 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                             <application_prototypes/>
                             <master_item_prototype/>
                         </item_prototype>
-                        <item_prototype>
-                            <name>[MSSQL] Database {#DBNAME}: Log Flush Wait Time</name>
-                            <type>0</type>
-                            <snmp_community/>
-                            <snmp_oid/>
-                            <key>perf_counter[&quot;\SQLServer:Databases({#DBS})\Log Flush Wait Time&quot;,300]</key>
-                            <delay>1m</delay>
-                            <history>30d</history>
-                            <trends>90d</trends>
-                            <status>0</status>
-                            <value_type>0</value_type>
-                            <allowed_hosts/>
-                            <units>sec</units>
-                            <snmpv3_contextname/>
-                            <snmpv3_securityname/>
-                            <snmpv3_securitylevel>0</snmpv3_securitylevel>
-                            <snmpv3_authprotocol>0</snmpv3_authprotocol>
-                            <snmpv3_authpassphrase/>
-                            <snmpv3_privprotocol>0</snmpv3_privprotocol>
-                            <snmpv3_privpassphrase/>
-                            <params/>
-                            <ipmi_sensor/>
-                            <authtype>0</authtype>
-                            <username/>
-                            <password/>
-                            <publickey/>
-                            <privatekey/>
-                            <port/>
-                            <description/>
-                            <inventory_link>0</inventory_link>
-                            <applications>
-                                <application>
-                                    <name>MSSQL</name>
-                                </application>
-                            </applications>
-                            <valuemap/>
-                            <logtimefmt/>
-                            <preprocessing/>
-                            <jmx_endpoint/>
-                            <application_prototypes/>
-                            <master_item_prototype/>
-                        </item_prototype>
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Databases({#DBS})\Log Flush Wait Time&quot;,300].last()}&gt;0.1</expression>
+                            <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Log Flush Waits/sec&quot;,300].last()}&gt;0.1</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
-                            <name>SQLServer:Databases({#DBS}) Log Flush Wait Time</name>
+                            <name>MSSQL: Database {#DBNAME} - Log Flush Waits/sec</name>
                             <correlation_mode>0</correlation_mode>
                             <correlation_tag/>
                             <url/>
@@ -2382,10 +2382,10 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Log Flush Waits/sec&quot;,300].last()}&gt;0.1</expression>
+                            <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Log Flush Wait Time&quot;,300].last()}&gt;0.1</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
-                            <name>SQLServer:Databases({#DBS})\Log Flush Waits/sec</name>
+                            <name>MSSQL: Database {#DBNAME} - Log Flush Wait Time</name>
                             <correlation_mode>0</correlation_mode>
                             <correlation_tag/>
                             <url/>
@@ -2401,7 +2401,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                             <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Log Growths&quot;,300].last()}&gt;0.1</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
-                            <name>SQLServer:Databases({#DBS})\Log Growths</name>
+                            <name>MSSQL: Database {#DBNAME} - Log Growths</name>
                             <correlation_mode>0</correlation_mode>
                             <correlation_tag/>
                             <url/>
@@ -2417,7 +2417,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                             <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Log Shrinks&quot;,300].last()}&gt;0.1</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
-                            <name>SQLServer:Databases({#DBS})\Log Shrinks</name>
+                            <name>MSSQL: Database {#DBNAME} - Log Shrinks</name>
                             <correlation_mode>0</correlation_mode>
                             <correlation_tag/>
                             <url/>
@@ -2433,7 +2433,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                             <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Percent Log Used&quot;,300].last()}&gt;80</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
-                            <name>SQLServer:Databases({#DBS})\Percent Log Used</name>
+                            <name>MSSQL: Database {#DBNAME} - Percent Log Used</name>
                             <correlation_mode>0</correlation_mode>
                             <correlation_tag/>
                             <url/>
