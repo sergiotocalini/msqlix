@@ -9,5 +9,5 @@ if (!$property) {
    $property = 'ProductVersion'
 }
 
-$output = Invoke-Sqlcmd -InputFile "C:\Program Files (x86)\Zabbix Agent\scripts\agentd\msqlix\sql\serverproperty.sql" -Variable @("PROP='$property'")
+$output = Invoke-Sqlcmd -InputFile "C:\Program Files (x86)\Zabbix Agent\scripts\agentd\msqlix\sql\serverproperty.sql" -Variable @("P1='$property'")
 $output.$property
