@@ -2,9 +2,9 @@
 
 [CmdletBinding()]
 param (
-    [Parameter(Mandatory=$False,ValueFromPipeline=$True,Position=0)][string]$type,
-    [Parameter(Mandatory=$False,ValueFromPipeline=$True,Position=1)][string]$file,
-    [Parameter(Mandatory=$False,ValueFromPipeline=$True,Position=2)][array]$params
+    [Parameter(Mandatory=$True,ValueFromPipeline=$True,Position=0)][string]$type,
+    [Parameter(Mandatory=$True,ValueFromPipeline=$True,Position=1)][string]$file,
+    [Parameter(Mandatory=$False,ValueFromRemainingArguments=$True,Position=2)][array]$params
 );
 
 $APP_PATH = split-path -parent $MyInvocation.MyCommand.Definition
