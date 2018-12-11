@@ -36,4 +36,4 @@ Unpacking objects: 100% (55/55), done.
 PS C:\Users\Administrator\Desktop> .\msqlix\deploy_zabbix.ps1
 PS C:\Users\Administrator\Desktop>
 ``` 
-*Note: the installation has to be executed on the zabbix agent host and you have to import the template on the zabbix web. The default installation directory is "C:\Program Files (x86)\Zabbix Agent\scripts\agentd\msqlix\*". Please restart the zabbix-agent after the installation of the script.
+*_Note: the installation has to be executed on the zabbix agent host and you have to import the template on the zabbix web. The default installation directory is __"C:\Program Files (x86)\Zabbix Agent\scripts\agentd\msqlix"__. Please restart the zabbix-agent after the installation of the script._
