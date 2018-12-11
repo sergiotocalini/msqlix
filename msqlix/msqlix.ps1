@@ -25,9 +25,8 @@ if (Test-Path -Path $SCRIPT_PATH) {
       $output = powershell.exe $SCRIPT_PATH -Params $params
    } elseif ($type -eq "sql" ) {
       $output = Invoke-Sqlcmd -InputFile $SCRIPT_PATH -Variable $SCRIPT_VARS
-      foreach ($p in $params) {
-        $output.$p
-      }
+      $output.QUERY_RESULT
+      
    }
 } else {
    Write-Host "File doesn't exists"
