@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>3.4</version>
-    <date>2018-03-21T14:48:29Z</date>
+    <date>2018-12-11T15:18:24Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -23,6 +23,180 @@
                 </application>
             </applications>
             <items>
+                <item>
+                    <name>[MSSQL] Performance: Errors - Kill Connection</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>msqlix.sql[dm_os_performance_counters.sql, &quot;Errors/sec&quot;, &quot;Kill Connection Errors&quot;]</key>
+                    <delay>5m</delay>
+                    <history>30d</history>
+                    <trends>90d</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>MSSQL</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing>
+                        <step>
+                            <type>10</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                    <jmx_endpoint/>
+                    <master_item/>
+                </item>
+                <item>
+                    <name>[MSSQL] Performance: Errors - User</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>msqlix.sql[dm_os_performance_counters.sql, &quot;Errors/sec&quot;, &quot;User Errors&quot;]</key>
+                    <delay>5m</delay>
+                    <history>30d</history>
+                    <trends>90d</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>MSSQL</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing>
+                        <step>
+                            <type>10</type>
+                            <params/>
+                        </step>
+                    </preprocessing>
+                    <jmx_endpoint/>
+                    <master_item/>
+                </item>
+                <item>
+                    <name>[MSSQL] Performance: Deadlocks</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>msqlix.sql[dm_os_performance_counters.sql, &quot;Number of Deadlocks/sec&quot;, &quot;_Total&quot;]</key>
+                    <delay>5m</delay>
+                    <history>30d</history>
+                    <trends>90d</trends>
+                    <status>0</status>
+                    <value_type>3</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description/>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>MSSQL</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
+                </item>
+                <item>
+                    <name>[MSSQL] Server: Version</name>
+                    <type>0</type>
+                    <snmp_community/>
+                    <snmp_oid/>
+                    <key>msqlix.sql[serverproperty, ProductVersion]</key>
+                    <delay>24h</delay>
+                    <history>30d</history>
+                    <trends>0</trends>
+                    <status>0</status>
+                    <value_type>1</value_type>
+                    <allowed_hosts/>
+                    <units/>
+                    <snmpv3_contextname/>
+                    <snmpv3_securityname/>
+                    <snmpv3_securitylevel>0</snmpv3_securitylevel>
+                    <snmpv3_authprotocol>0</snmpv3_authprotocol>
+                    <snmpv3_authpassphrase/>
+                    <snmpv3_privprotocol>0</snmpv3_privprotocol>
+                    <snmpv3_privpassphrase/>
+                    <params/>
+                    <ipmi_sensor/>
+                    <authtype>0</authtype>
+                    <username/>
+                    <password/>
+                    <publickey/>
+                    <privatekey/>
+                    <port/>
+                    <description>https://support.microsoft.com/en-us/help/321185/how-to-determine-the-version-edition-and-update-level-of-sql-server-an</description>
+                    <inventory_link>0</inventory_link>
+                    <applications>
+                        <application>
+                            <name>MSSQL</name>
+                        </application>
+                    </applications>
+                    <valuemap/>
+                    <logtimefmt/>
+                    <preprocessing/>
+                    <jmx_endpoint/>
+                    <master_item/>
+                </item>
                 <item>
                     <name>[MSSQL] Service: Listening</name>
                     <type>0</type>
@@ -2366,7 +2540,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                     </item_prototypes>
                     <trigger_prototypes>
                         <trigger_prototype>
-                            <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Log Flush Waits/sec&quot;,300].last()}&gt;0.1</expression>
+                            <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Log Flush Waits/sec&quot;,300].min(#5)}&gt;25</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>MSSQL: Database {#DBNAME} - Log Flush Waits/sec</name>
@@ -2382,7 +2556,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Log Flush Wait Time&quot;,300].last()}&gt;0.1</expression>
+                            <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Log Flush Wait Time&quot;,300].min(#5)}&gt;150</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>MSSQL: Database {#DBNAME} - Log Flush Wait Time</name>
@@ -2398,7 +2572,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Log Growths&quot;,300].last()}&gt;0.1</expression>
+                            <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Log Growths&quot;,300].min(#5)}&gt;270</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>MSSQL: Database {#DBNAME} - Log Growths</name>
@@ -2414,7 +2588,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Log Shrinks&quot;,300].last()}&gt;0.1</expression>
+                            <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Log Shrinks&quot;,300].min(#5)}&gt;3.1</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>MSSQL: Database {#DBNAME} - Log Shrinks</name>
@@ -2430,7 +2604,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                             <tags/>
                         </trigger_prototype>
                         <trigger_prototype>
-                            <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Percent Log Used&quot;,300].last()}&gt;80</expression>
+                            <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Databases({#DBNAME})\Percent Log Used&quot;,300].min(#5)}&gt;80</expression>
                             <recovery_mode>0</recovery_mode>
                             <recovery_expression/>
                             <name>MSSQL: Database {#DBNAME} - Percent Log Used</name>
@@ -2448,7 +2622,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                     </trigger_prototypes>
                     <graph_prototypes>
                         <graph_prototype>
-                            <name>SQLServer:Databases({#DBS}) Bulk Copies</name>
+                            <name>[MSSQL] Database {#DBNAME}: Bulk Copies</name>
                             <width>900</width>
                             <height>200</height>
                             <yaxismin>0.0000</yaxismin>
@@ -2469,7 +2643,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                                     <sortorder>0</sortorder>
                                     <drawtype>0</drawtype>
                                     <color>00C800</color>
-                                    <yaxisside>0</yaxisside>
+                                    <yaxisside>1</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
@@ -2481,7 +2655,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                                     <sortorder>1</sortorder>
                                     <drawtype>0</drawtype>
                                     <color>C80000</color>
-                                    <yaxisside>0</yaxisside>
+                                    <yaxisside>1</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
@@ -2492,7 +2666,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                             </graph_items>
                         </graph_prototype>
                         <graph_prototype>
-                            <name>SQLServer:Databases({#DBS}) Data and Log Files</name>
+                            <name>[MSSQL] Database {#DBNAME}: Data and Log Files</name>
                             <width>900</width>
                             <height>200</height>
                             <yaxismin>0.0000</yaxismin>
@@ -2513,7 +2687,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                                     <sortorder>0</sortorder>
                                     <drawtype>0</drawtype>
                                     <color>00C800</color>
-                                    <yaxisside>0</yaxisside>
+                                    <yaxisside>1</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
@@ -2525,7 +2699,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                                     <sortorder>1</sortorder>
                                     <drawtype>0</drawtype>
                                     <color>FF3333</color>
-                                    <yaxisside>0</yaxisside>
+                                    <yaxisside>1</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
@@ -2537,7 +2711,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                                     <sortorder>2</sortorder>
                                     <drawtype>0</drawtype>
                                     <color>0000C8</color>
-                                    <yaxisside>0</yaxisside>
+                                    <yaxisside>1</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
@@ -2548,7 +2722,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                             </graph_items>
                         </graph_prototype>
                         <graph_prototype>
-                            <name>SQLServer:Databases({#DBS}) Log Growths and Shrinks</name>
+                            <name>[MSSQL] Database {#DBNAME}: Log Growths and Shrinks</name>
                             <width>900</width>
                             <height>200</height>
                             <yaxismin>0.0000</yaxismin>
@@ -2569,7 +2743,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                                     <sortorder>0</sortorder>
                                     <drawtype>0</drawtype>
                                     <color>00C800</color>
-                                    <yaxisside>0</yaxisside>
+                                    <yaxisside>1</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
@@ -2581,7 +2755,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                                     <sortorder>1</sortorder>
                                     <drawtype>0</drawtype>
                                     <color>FF3333</color>
-                                    <yaxisside>0</yaxisside>
+                                    <yaxisside>1</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
@@ -2593,7 +2767,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                                     <sortorder>2</sortorder>
                                     <drawtype>0</drawtype>
                                     <color>0000C8</color>
-                                    <yaxisside>0</yaxisside>
+                                    <yaxisside>1</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
@@ -2604,7 +2778,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                             </graph_items>
                         </graph_prototype>
                         <graph_prototype>
-                            <name>SQLServer:Databases({#DBS}) Log Rates</name>
+                            <name>[MSSQL] Database {#DBNAME}: Log Rates</name>
                             <width>900</width>
                             <height>200</height>
                             <yaxismin>0.0000</yaxismin>
@@ -2625,7 +2799,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                                     <sortorder>0</sortorder>
                                     <drawtype>0</drawtype>
                                     <color>00C800</color>
-                                    <yaxisside>0</yaxisside>
+                                    <yaxisside>1</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
@@ -2637,7 +2811,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                                     <sortorder>1</sortorder>
                                     <drawtype>0</drawtype>
                                     <color>FF3333</color>
-                                    <yaxisside>0</yaxisside>
+                                    <yaxisside>1</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
@@ -2649,7 +2823,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                                     <sortorder>2</sortorder>
                                     <drawtype>0</drawtype>
                                     <color>0000C8</color>
-                                    <yaxisside>0</yaxisside>
+                                    <yaxisside>1</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
@@ -2661,7 +2835,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                                     <sortorder>3</sortorder>
                                     <drawtype>0</drawtype>
                                     <color>C800C8</color>
-                                    <yaxisside>0</yaxisside>
+                                    <yaxisside>1</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
@@ -2673,7 +2847,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                                     <sortorder>4</sortorder>
                                     <drawtype>0</drawtype>
                                     <color>00C8C8</color>
-                                    <yaxisside>0</yaxisside>
+                                    <yaxisside>1</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
@@ -2685,7 +2859,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                                     <sortorder>5</sortorder>
                                     <drawtype>0</drawtype>
                                     <color>C8C800</color>
-                                    <yaxisside>0</yaxisside>
+                                    <yaxisside>1</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
@@ -2697,7 +2871,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                                     <sortorder>6</sortorder>
                                     <drawtype>0</drawtype>
                                     <color>C8C8C8</color>
-                                    <yaxisside>0</yaxisside>
+                                    <yaxisside>1</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
@@ -2708,7 +2882,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                             </graph_items>
                         </graph_prototype>
                         <graph_prototype>
-                            <name>SQLServer:Databases({#DBS}) Replication</name>
+                            <name>[MSSQL] Database {#DBNAME}: Replication</name>
                             <width>900</width>
                             <height>200</height>
                             <yaxismin>0.0000</yaxismin>
@@ -2729,7 +2903,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                                     <sortorder>0</sortorder>
                                     <drawtype>0</drawtype>
                                     <color>00C800</color>
-                                    <yaxisside>0</yaxisside>
+                                    <yaxisside>1</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
@@ -2740,7 +2914,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                             </graph_items>
                         </graph_prototype>
                         <graph_prototype>
-                            <name>SQLServer:Databases({#DBS}) Transactions</name>
+                            <name>[MSSQL] Database {#DBNAME}: Transactions</name>
                             <width>900</width>
                             <height>200</height>
                             <yaxismin>0.0000</yaxismin>
@@ -2761,7 +2935,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                                     <sortorder>0</sortorder>
                                     <drawtype>0</drawtype>
                                     <color>00C800</color>
-                                    <yaxisside>0</yaxisside>
+                                    <yaxisside>1</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
@@ -2773,7 +2947,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                                     <sortorder>1</sortorder>
                                     <drawtype>0</drawtype>
                                     <color>FF3333</color>
-                                    <yaxisside>0</yaxisside>
+                                    <yaxisside>1</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
@@ -2785,7 +2959,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                                     <sortorder>2</sortorder>
                                     <drawtype>0</drawtype>
                                     <color>0000C8</color>
-                                    <yaxisside>0</yaxisside>
+                                    <yaxisside>1</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
@@ -2797,7 +2971,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                                     <sortorder>3</sortorder>
                                     <drawtype>0</drawtype>
                                     <color>C800C8</color>
-                                    <yaxisside>0</yaxisside>
+                                    <yaxisside>1</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
@@ -2809,7 +2983,7 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                                     <sortorder>4</sortorder>
                                     <drawtype>0</drawtype>
                                     <color>00C8C8</color>
-                                    <yaxisside>0</yaxisside>
+                                    <yaxisside>1</yaxisside>
                                     <calc_fnc>2</calc_fnc>
                                     <type>0</type>
                                     <item>
@@ -2825,7 +2999,12 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
                 </discovery_rule>
             </discovery_rules>
             <httptests/>
-            <macros/>
+            <macros>
+                <macro>
+                    <macro>{$MSSQL_BM_PAGE_LOOKUP}</macro>
+                    <value>5500</value>
+                </macro>
+            </macros>
             <templates/>
             <screens/>
         </template>
@@ -2843,12 +3022,12 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
             <priority>2</priority>
             <description/>
             <type>0</type>
-            <manual_close>0</manual_close>
+            <manual_close>1</manual_close>
             <dependencies/>
             <tags/>
         </trigger>
         <trigger>
-            <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Access Methods\Index Searches/sec&quot;,300].min(#5)}/{Template DB MSSQL:perf_counter[&quot;\SQLServer:Access Methods\Full Scans/sec&quot;,300].min(#5)}&gt;1000</expression>
+            <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Access Methods\Index Searches/sec&quot;,300].min(#5)}/{Template DB MSSQL:perf_counter[&quot;\SQLServer:Access Methods\Full Scans/sec&quot;,300].max(#5)}&gt;11500</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
             <name>MSSQL: Access Methods Full Scans / sec</name>
@@ -2862,12 +3041,12 @@ We cannot conclude that a SQL Server is not active simply by looking at only bat
 ‚Ä¢ Too many rows requested&#13;
 Queries with missing indexes or too many rows requested will have a large number of logical reads and an increased CPU time.</description>
             <type>0</type>
-            <manual_close>0</manual_close>
+            <manual_close>1</manual_close>
             <dependencies/>
             <tags/>
         </trigger>
         <trigger>
-            <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Access Methods\Page Splits/sec&quot;,300].min(#5)}&gt;0.2*{Template DB MSSQL:perf_counter[&quot;\SQLServer:SQL Statistics\Batch Requests/Sec&quot;,300].min(#5)}</expression>
+            <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Access Methods\Page Splits/sec&quot;,300].min(#5)}&gt;0.5*{Template DB MSSQL:perf_counter[&quot;\SQLServer:SQL Statistics\Batch Requests/Sec&quot;,300].min(#5)}</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
             <name>MSSQL: Access Methods Page Splits/sec</name>
@@ -2880,7 +3059,7 @@ Queries with missing indexes or too many rows requested will have a large number
 &#13;
 Note that this counter also includes the new page allocations as well and doesn‚Äôt necessarily pose a problem.  The other place we can confirm the page splits that involve data or index rows moves are the fragmented indexes on page splits.</description>
             <type>0</type>
-            <manual_close>0</manual_close>
+            <manual_close>1</manual_close>
             <dependencies/>
             <tags/>
         </trigger>
@@ -2896,7 +3075,7 @@ Note that this counter also includes the new page allocations as well and doesn‚
             <priority>2</priority>
             <description>This counter indicates how often SQL Server goes to the buffer, not the hard disk, to get data. The higher this ratio, the less often SQL Server has to go to the hard disk to fetch data, and performance overall is boosted. Unlike many of the other counters available for monitoring SQL Server, this counter averages the Buffer Cache Hit Ratio from the time the last instance of SQL Server was restarted. In other words, this counter is not a real-time measurement, but an average of all the days since SQL Server was last restarted. In OLTP applications, this ratio should exceed 90-95%. If it doesn't, then you need to add more RAM to your server to increase performance. In OLAP applications, the ratio could be much less because of the nature of how OLAP works. In any case, more RAM should increase the performance of SQL Server OLAP activity.</description>
             <type>0</type>
-            <manual_close>0</manual_close>
+            <manual_close>1</manual_close>
             <dependencies/>
             <tags/>
         </trigger>
@@ -2912,7 +3091,7 @@ Note that this counter also includes the new page allocations as well and doesn‚
             <priority>2</priority>
             <description>Free list stalls/sec is the frequency with which requests for available database pages are suspended because no buffers are available. Free list stall rates of 3 or 4 per second indicate too little SQL memory available.</description>
             <type>0</type>
-            <manual_close>0</manual_close>
+            <manual_close>1</manual_close>
             <dependencies/>
             <tags/>
         </trigger>
@@ -2928,12 +3107,12 @@ Note that this counter also includes the new page allocations as well and doesn‚
             <priority>2</priority>
             <description/>
             <type>0</type>
-            <manual_close>0</manual_close>
+            <manual_close>1</manual_close>
             <dependencies/>
             <tags/>
         </trigger>
         <trigger>
-            <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Buffer Manager\Page Life Expectancy&quot;,300].min(#5)}&lt;300</expression>
+            <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Buffer Manager\Page Life Expectancy&quot;,300].min(#5)}&lt;100</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
             <name>MSSQL: Buffer Manager Page Life Expectancy</name>
@@ -2944,12 +3123,12 @@ Note that this counter also includes the new page allocations as well and doesn‚
             <priority>2</priority>
             <description/>
             <type>0</type>
-            <manual_close>0</manual_close>
+            <manual_close>1</manual_close>
             <dependencies/>
             <tags/>
         </trigger>
         <trigger>
-            <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Buffer Manager\Page lookups/sec&quot;,300].min(#5)}/{Template DB MSSQL:perf_counter[&quot;\SQLServer:SQL Statistics\Batch Requests/Sec&quot;,300].min(#5)}&gt;250</expression>
+            <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Buffer Manager\Page lookups/sec&quot;,300].min(#5)}/{Template DB MSSQL:perf_counter[&quot;\SQLServer:SQL Statistics\Batch Requests/Sec&quot;,300].max(#5)}&gt;{$MSSQL_BM_PAGE_LOOKUP}</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
             <name>MSSQL: Buffer Manager Page lookups/sec</name>
@@ -2960,12 +3139,12 @@ Note that this counter also includes the new page allocations as well and doesn‚
             <priority>2</priority>
             <description>Number of requests to find a page in the buffer pool. When the ratio of page lookups to batch requests is much greater than 100, this is an indication that while query plans are looking up data in the buffer pool, these plans are inefficient. Identify queries with the highest amount of logical I/O's and tune them.</description>
             <type>0</type>
-            <manual_close>0</manual_close>
+            <manual_close>1</manual_close>
             <dependencies/>
             <tags/>
         </trigger>
         <trigger>
-            <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Buffer Manager\Page reads/sec&quot;,300].min(#5)}&gt;350</expression>
+            <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Buffer Manager\Page reads/sec&quot;,300].min(#5)}&gt;15000</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
             <name>MSSQL: Buffer Manager Page reads/sec</name>
@@ -2976,12 +3155,12 @@ Note that this counter also includes the new page allocations as well and doesn‚
             <priority>2</priority>
             <description>Number of physical database page reads issued. 80 ‚Äì 90 per second is normal, anything that is above indicates indexing or memory constraint.</description>
             <type>0</type>
-            <manual_close>0</manual_close>
+            <manual_close>1</manual_close>
             <dependencies/>
             <tags/>
         </trigger>
         <trigger>
-            <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Buffer Manager\Page writes/sec&quot;,300].min(#5)}&gt;250</expression>
+            <expression>{Template DB MSSQL:perf_counter[&quot;\SQLServer:Buffer Manager\Page writes/sec&quot;,300].min(#5)}&gt;1500</expression>
             <recovery_mode>0</recovery_mode>
             <recovery_expression/>
             <name>MSSQL: Buffer Manager Page writes/sec</name>
@@ -2992,7 +3171,7 @@ Note that this counter also includes the new page allocations as well and doesn‚
             <priority>2</priority>
             <description>Number of physical database page writes issued. 80 ‚Äì 90 per second is normal, anything that is above indicates indexing or memory constraint.</description>
             <type>0</type>
-            <manual_close>0</manual_close>
+            <manual_close>1</manual_close>
             <dependencies/>
             <tags/>
         </trigger>
@@ -3008,7 +3187,7 @@ Note that this counter also includes the new page allocations as well and doesn‚
             <priority>2</priority>
             <description>&gt; 2 per second indicates that the application is not correctly using connection pooling.</description>
             <type>0</type>
-            <manual_close>0</manual_close>
+            <manual_close>1</manual_close>
             <dependencies/>
             <tags/>
         </trigger>
@@ -3024,7 +3203,7 @@ Note that this counter also includes the new page allocations as well and doesn‚
             <priority>2</priority>
             <description>&gt; 2 per second indicates that the application is not correctly using connection pooling.</description>
             <type>0</type>
-            <manual_close>0</manual_close>
+            <manual_close>1</manual_close>
             <dependencies/>
             <tags/>
         </trigger>
@@ -3040,7 +3219,7 @@ Note that this counter also includes the new page allocations as well and doesn‚
             <priority>2</priority>
             <description/>
             <type>0</type>
-            <manual_close>0</manual_close>
+            <manual_close>1</manual_close>
             <dependencies/>
             <tags/>
         </trigger>
@@ -3056,7 +3235,7 @@ Note that this counter also includes the new page allocations as well and doesn‚
             <priority>2</priority>
             <description>This counter reports how many times users waited to acquire a lock over the past second.  Note that while you are actually waiting on the lock that this is not reflected in this counter‚Äîit gets incremented only when you ‚Äúwake up‚Äù after waiting on the lock. If this value is nonzero then it is an indication that there is at least some level of blocking occurring.  If you combine this with the Lock Wait Time counter, you can get some idea of how long the blocking lasted.  A zero value for this counter can definitively prove out blocking as a potential cause; a nonzero value will require looking at other information to determine whether it is significant.</description>
             <type>0</type>
-            <manual_close>0</manual_close>
+            <manual_close>1</manual_close>
             <dependencies/>
             <tags/>
         </trigger>
@@ -3076,7 +3255,7 @@ Note that this counter also includes the new page allocations as well and doesn‚
 &#13;
 Note: For ‚ÄúLock Wait Time‚Äù it is recommended to look beyond the Avg value.  Look for any peaks that are close (or exceeds) to a wait of 60 sec.   Though this counter counts how many total milliseconds SQL Server is  waiting on locks during the last second, but the counter actually records  at the end of locking event.  So most probably the peaks represent one huge locking event.  If those events exceeds more than 60seconds then they may have extended blocking and could be an issue. In such cases, thoroughly analyze the blocking script output. Some applications are written for timing out after 60 seconds and that‚Äôs not acceptable response for those applications.</description>
             <type>0</type>
-            <manual_close>0</manual_close>
+            <manual_close>1</manual_close>
             <dependencies/>
             <tags/>
         </trigger>
@@ -3092,7 +3271,7 @@ Note: For ‚ÄúLock Wait Time‚Äù it is recommended to look beyond the Avg value.  
             <priority>2</priority>
             <description>The number of lock requests that resulted in a deadlock.</description>
             <type>0</type>
-            <manual_close>0</manual_close>
+            <manual_close>1</manual_close>
             <dependencies/>
             <tags/>
         </trigger>
@@ -3108,7 +3287,7 @@ Note: For ‚ÄúLock Wait Time‚Äù it is recommended to look beyond the Avg value.  
             <priority>4</priority>
             <description/>
             <type>0</type>
-            <manual_close>0</manual_close>
+            <manual_close>1</manual_close>
             <dependencies/>
             <tags/>
         </trigger>
@@ -3124,7 +3303,7 @@ Note: For ‚ÄúLock Wait Time‚Äù it is recommended to look beyond the Avg value.  
             <priority>4</priority>
             <description/>
             <type>0</type>
-            <manual_close>0</manual_close>
+            <manual_close>1</manual_close>
             <dependencies/>
             <tags/>
         </trigger>
@@ -3140,7 +3319,7 @@ Note: For ‚ÄúLock Wait Time‚Äù it is recommended to look beyond the Avg value.  
             <priority>2</priority>
             <description>The number of times per second that SQL Server compilations have occurred. This value needs to be as low as possible. If you see a high value such as over 100, then it‚Äôs an indication that there are lots of adhoc queries that are running, might cause CPU usage, solution is to re-write these adhoc as stored procedure or use sp_executeSQL.</description>
             <type>0</type>
-            <manual_close>0</manual_close>
+            <manual_close>1</manual_close>
             <dependencies/>
             <tags/>
         </trigger>
@@ -3156,7 +3335,7 @@ Note: For ‚ÄúLock Wait Time‚Äù it is recommended to look beyond the Avg value.  
             <priority>2</priority>
             <description/>
             <type>0</type>
-            <manual_close>0</manual_close>
+            <manual_close>1</manual_close>
             <dependencies/>
             <tags/>
         </trigger>
